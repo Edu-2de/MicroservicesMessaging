@@ -11,3 +11,13 @@ services:
       - rabbitmq
     environment:
       - RABBITMQ_HOST=rabbitmq
+    ports:
+      - "8000:8000"
+  service_b:
+    build: ./service_b
+    depends_on:
+      - rabbitmq
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+    ports:
+      - "8001:8000"
