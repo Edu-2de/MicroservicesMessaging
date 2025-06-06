@@ -11,9 +11,3 @@ services:
       - rabbitmq
     environment:
       - RABBITMQ_HOST=rabbitmq
-  service_b:
-    build: ./service_b
-    depends_on:
-      - rabbitmq
-    environment:
-      - RABBITMQ_HOST=rabbitmq
